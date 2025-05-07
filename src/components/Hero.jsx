@@ -41,7 +41,8 @@ function Hero() {
           
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 dark:text-gray-200 animate-slide-down" style={{ animationDelay: '0.3s' }}>
             <span className="inline-block">
-              <span className="text-primary">Full Stack Developer</span> with AI/ML expertise
+              <span className="text-primary">Full Stack Developer</span> with 
+              <span className="text-accent font-extrabold ml-1">AI/ML expertise</span>
               <span className="inline-block ml-2 text-accent">&lt;/&gt;</span>
             </span>
           </h2>
@@ -127,7 +128,7 @@ function Hero() {
             &lt;div&gt;
           </div>
           <div className="absolute -bottom-4 left-1/4 text-xl text-primary opacity-30 animate-fade-in">
-            &lt;/div&gt;
+            Skt-learn
           </div>
           
           {/* Experience badge */}
