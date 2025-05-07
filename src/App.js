@@ -16,7 +16,7 @@ function App() {
       <div className="relative z-10 px-4 md:px-12 lg:px-20">
         <Navbar />
         <Hero />
-        <Works />z
+        <Works />
         <About />
         <Skills />
         <Contact />
