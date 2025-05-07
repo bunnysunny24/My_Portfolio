@@ -19,7 +19,6 @@ function App() {
         <Works />z
         <About />
         <Skills />
-        <Testimonials />
         <Contact />
         <Footer />
       </div>
