@@ -41,7 +41,7 @@ function Hero() {
           
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 dark:text-gray-200 animate-slide-down" style={{ animationDelay: '0.3s' }}>
             <span className="inline-block">
-              <span className="text-primary">Front-end</span> Developer
+              <span className="text-primary">Full Stack Developer</span> with AI/ML expertise
               <span className="inline-block ml-2 text-accent">&lt;/&gt;</span>
             </span>
           </h2>
