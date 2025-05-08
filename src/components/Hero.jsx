@@ -27,69 +27,71 @@ function Hero() {
     <div className="relative pt-32 pb-16 md:py-36 mx-auto max-w-7xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left side with text content */}
-        <div className="flex flex-col space-y-6 md:pr-12 animate-fade-in">
-          <div className="text-sm text-primary font-semibold tracking-wider animate-slide-down">
+        <div className="flex flex-col space-y-8 md:pr-12 animate-fade-in">
+          <div className="text-sm text-primary font-semibold tracking-widest uppercase animate-slide-down">
             WELCOME TO MY WORLD
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white animate-slide-down" style={{ animationDelay: '0.2s' }}>
-            Hi, I'm <span className="text-primary relative">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-800 dark:text-white animate-slide-down tracking-tight" style={{ animationDelay: '0.2s', letterSpacing: '-0.02em' }}>
+            Hi, I'm <span className="text-primary relative inline-block">
               Developer
-              <span className="absolute -bottom-1 left-0 w-full h-1 bg-accent"></span>
+              <span className="absolute -bottom-1 left-0 w-full h-1.5 bg-accent"></span>
             </span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 dark:text-gray-200 animate-slide-down" style={{ animationDelay: '0.3s' }}>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700 dark:text-gray-200 animate-slide-down leading-tight" style={{ animationDelay: '0.3s' }}>
             <span className="inline-block">
               <span className="text-primary">Full Stack Developer</span> with 
-              <span className="text-accent font-extrabold ml-1">AI/ML expertise</span>
-              <span className="inline-block ml-2 text-accent">&lt;/&gt;</span>
+              <span className="text-accent font-extrabold ml-2">AI/ML expertise</span>
+              <span className="inline-block ml-3 text-accent">&lt;/&gt;</span>
             </span>
           </h2>
           
-          <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            I design and code beautifully simple things, and I love what I do. 
-            Specialized in creating modern, responsive websites with clean and efficient code.
+          <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-xl animate-fade-in" style={{ animationDelay: '0.5s', lineHeight: '1.8' }}>
+            I design and develop modern web applications with a focus on beautiful interfaces and seamless user experiences. Specialized in creating responsive websites with clean and efficient code.
           </p>
           
-          <div className="flex space-x-5 mt-8 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+          <div className="flex flex-wrap gap-5 mt-8 animate-fade-in" style={{ animationDelay: '0.7s' }}>
             <a 
               href="#works" 
-              className="group relative overflow-hidden bg-primary hover:bg-accent text-white px-8 py-3 rounded-full font-medium transition-all duration-500 transform hover:scale-105 shadow-button hover:shadow-highlight flex items-center"
+              className="group relative overflow-hidden bg-primary hover:bg-accent text-white px-10 py-4 rounded-full font-medium transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center"
+              style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05)' }}
             >
-              <span className="relative z-10">My Work</span>
-              <span className="absolute w-0 h-0 rounded-full bg-primary-light opacity-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:w-72 group-hover:h-72 transition-all duration-500"></span>
-              <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <span className="relative z-10">View My Work</span>
+              <span className="absolute w-0 h-0 rounded-full bg-white/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:w-72 group-hover:h-72 transition-all duration-500"></span>
+              <svg className="w-6 h-6 ml-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
             
             <a 
               href="#contact" 
-              className="px-8 py-3 rounded-full font-medium border-2 border-primary text-primary hover:text-white hover:bg-primary transition-all duration-300 flex items-center"
+              className="px-10 py-4 rounded-full font-medium border-2 border-primary text-primary hover:text-white hover:bg-primary transition-all duration-300 flex items-center shadow-lg hover:shadow-xl"
+              style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.03)' }}
             >
               Contact Me
-              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </a>
           </div>
           
-          <div className="flex items-center space-x-4 mt-6 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-            <span className="text-gray-600 dark:text-gray-300 text-sm">Find me on:</span>
-            {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
+          <div className="flex items-center space-x-5 mt-10 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+            <span className="text-gray-600 dark:text-gray-300 text-sm font-medium">Find me on:</span>
+            {['github', 'linkedin', 'instagram', 'gmail'].map((social) => (
               <a 
                 key={social}
                 href={`#${social}`} 
-                className="w-10 h-10 flex items-center justify-center bg-white/80 rounded-full shadow-sm transform transition-all duration-300 hover:scale-110 hover:shadow-md dark:bg-gray-800 dark:hover:bg-gray-700"
+                className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700"
+                style={{ boxShadow: '0 10px 20px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03)' }}
                 aria-label={social}
               >
                 <span className={`text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary dark:hover:text-primary`}>
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    {social === 'facebook' && <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />}
-                    {social === 'twitter' && <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />}
-                    {social === 'instagram' && <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />}
+                    {social === 'github' && <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />}
                     {social === 'linkedin' && <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />}
+                    {social === 'instagram' && <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />}
+                    {social === 'gmail' && <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />}
                   </svg>
                 </span>
               </a>
@@ -99,53 +101,83 @@ function Hero() {
         
         {/* Right side with profile image and design elements */}
         <div className="relative flex justify-center items-center mt-12 md:mt-0">
-          <div className="absolute w-64 h-64 md:w-80 md:h-80 bg-primary/5 rounded-full animate-spin-very-slow"></div>
+          {/* 3D effect circular background gradients */}
+          <div className="absolute w-80 h-80 md:w-[450px] md:h-[450px] bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full animate-spin-very-slow"></div>
+          <div className="absolute w-72 h-72 md:w-[400px] md:h-[400px] bg-gradient-to-bl from-accent/5 to-primary/5 rounded-full -rotate-45 animate-spin-reverse animate-very-slow"></div>
           
+          {/* 3D decorative geometric shapes */}
           <div className="absolute w-full h-full max-w-md max-h-md flex items-center justify-center">
-            <div className="w-48 h-48 md:w-72 md:h-72 rotate-45 border-4 border-primary/30 rounded-xl animate-spin-reverse animate-very-slow"></div>
+            <div className="w-60 h-60 md:w-80 md:h-80 rotate-45 border-4 border-primary/20 rounded-xl animate-spin-reverse animate-very-slow"></div>
+            <div className="absolute w-40 h-40 md:w-60 md:h-60 -rotate-12 border-4 border-accent/20 rounded-xl animate-float animate-very-slow"></div>
           </div>
           
+          {/* Main profile image with 3D shadow effects */}
           <div
             ref={profileImageRef}
-            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-white shadow-xl overflow-hidden border-4 border-white relative z-10 animate-scale-in"
-            style={{ animationDelay: '0.4s' }}
+            className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative z-10 animate-scale-in"
+            style={{ 
+              animationDelay: '0.4s',
+              boxShadow: '0 10px 50px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08)'
+            }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-accent-light/20 mix-blend-overlay"></div>
+            {/* Gradient background visible behind transparent parts of the image */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-light/30 to-accent-light/30"></div>
+            
+            {/* Image with transparent background - adjusted to show full head */}
             <img
               src="/BNY-PP-300.JPG"
               alt="Developer"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-contain relative z-10"
+              style={{ 
+                objectPosition: "center 40%",
+                background: "transparent" 
+              }}
             />
-            <div className="absolute inset-0 rounded-full shadow-inner-light"></div>
             
-            {/* Decorative dots */}
-            <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary rounded-full animate-pulse-slow"></div>
+            {/* Subtle glow effect around edges */}
+            <div className="absolute inset-0 rounded-full shadow-inner-light z-20"></div>
+            
+            {/* 3D floating accent dots */}
+            <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent rounded-full animate-pulse shadow-lg z-30" 
+                 style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)' }}></div>
+            <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-primary rounded-full animate-pulse-slow shadow-lg z-30"
+                 style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)' }}></div>
           </div>
           
-          {/* Code decoration */}
-          <div className="absolute -top-4 right-1/4 text-xl text-primary opacity-30 animate-fade-in">
-            &lt;div&gt;
+          {/* Technology accent text elements with 3D style */}
+          <div className="absolute -top-8 right-1/4 text-xl font-mono text-primary/60 animate-fade-in">
+            &lt;TensorFlow/&gt;
           </div>
-          <div className="absolute -bottom-4 left-1/4 text-xl text-primary opacity-30 animate-fade-in">
-            Skt-learn
+          <div className="absolute -bottom-8 left-1/4 text-xl font-mono text-accent/60 animate-fade-in">
+            &lt;scikit-learn/&gt;
           </div>
           
-          {/* Experience badge */}
-          <div className="absolute -right-4 bottom-1/3 bg-white shadow-lg rounded-full py-2 px-4 z-20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          {/* 3D floating badges */}
+          <div className="absolute -right-6 bottom-1/3 bg-white shadow-xl rounded-full py-3 px-5 z-20 animate-float" 
+               style={{ 
+                 animationDelay: '0.8s',
+                 boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05)'
+               }}>
             <div className="text-center">
-              <span className="block text-sm font-semibold text-primary">5+ Years</span>
+              <span className="block text-base font-bold text-primary">1</span>
               <span className="block text-xs text-gray-600">Experience</span>
             </div>
           </div>
           
-          {/* Skills badge */}
-          <div className="absolute -left-4 top-1/3 bg-white shadow-lg rounded-full py-2 px-4 z-20 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="absolute -left-6 top-1/3 bg-white shadow-xl rounded-full py-3 px-5 z-20 animate-float" 
+               style={{ 
+                 animationDelay: '0.6s',
+                 boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05)'  
+               }}>
             <div className="text-center">
-              <span className="block text-sm font-semibold text-primary">20+</span>
+              <span className="block text-base font-bold text-primary">20+</span>
               <span className="block text-xs text-gray-600">Projects</span>
             </div>
           </div>
+          
+          {/* Additional 3D elements */}
+          <div className="absolute top-1/4 -right-10 w-24 h-24 rounded-lg bg-gradient-to-tr from-primary/5 to-accent/10 rotate-12 animate-float-slow"></div>
+          <div className="absolute bottom-1/4 -left-10 w-20 h-20 rounded-lg bg-gradient-to-bl from-accent/5 to-primary/10 -rotate-12 animate-float-slow"></div>
         </div>
       </div>
     </div>
