@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Works() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -161,10 +162,10 @@ function Works() {
       </div>
       
       <div className="text-center mt-16">
-        <button className="group relative overflow-hidden border-2 border-primary text-primary hover:text-white px-10 py-4 rounded-full font-medium transition-all duration-300 shadow-button hover:shadow-lg">
+        <Link to="/projects" className="group relative overflow-hidden border-2 border-primary text-primary hover:text-white px-10 py-4 rounded-full font-medium transition-all duration-300 shadow-button hover:shadow-lg inline-block">
           <span className="relative z-10">View All Projects</span>
           <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-        </button>
+        </Link>
       </div>
     </section>
   );
