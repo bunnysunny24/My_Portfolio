@@ -101,14 +101,14 @@ function Hero() {
         
         {/* Right side with profile image and design elements */}
         <div className="relative flex justify-center items-center mt-12 md:mt-0">
-          {/* 3D effect circular background gradients */}
-          <div className="absolute w-80 h-80 md:w-[450px] md:h-[450px] bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full animate-spin-very-slow"></div>
-          <div className="absolute w-72 h-72 md:w-[400px] md:h-[400px] bg-gradient-to-bl from-accent/5 to-primary/5 rounded-full -rotate-45 animate-spin-reverse animate-very-slow"></div>
+          {/* 3D effect circular background gradients - lighter version */}
+          <div className="absolute w-80 h-80 md:w-[450px] md:h-[450px] bg-gradient-to-tr from-primary/5 to-accent/5 rounded-full animate-spin-very-slow"></div>
+          <div className="absolute w-72 h-72 md:w-[400px] md:h-[400px] bg-gradient-to-bl from-accent/3 to-primary/3 rounded-full -rotate-45 animate-spin-reverse animate-very-slow"></div>
           
-          {/* 3D decorative geometric shapes */}
+          {/* 3D decorative geometric shapes - lighter version */}
           <div className="absolute w-full h-full max-w-md max-h-md flex items-center justify-center">
-            <div className="w-60 h-60 md:w-80 md:h-80 rotate-45 border-4 border-primary/20 rounded-xl animate-spin-reverse animate-very-slow"></div>
-            <div className="absolute w-40 h-40 md:w-60 md:h-60 -rotate-12 border-4 border-accent/20 rounded-xl animate-float animate-very-slow"></div>
+            <div className="w-60 h-60 md:w-80 md:h-80 rotate-45 border-4 border-primary/10 rounded-xl animate-spin-reverse animate-very-slow"></div>
+            <div className="absolute w-40 h-40 md:w-60 md:h-60 -rotate-12 border-4 border-accent/10 rounded-xl animate-float animate-very-slow"></div>
           </div>
           
           {/* Main profile image with 3D shadow effects */}
