@@ -87,6 +87,42 @@ function AllProjects() {
     },
     {
       id: 9,
+      title: "EvoDoc: Intelligent Medical Assistant",
+      category: "AI & Healthcare",
+      image: "/dev.webp",
+      description: "An advanced AI-powered healthcare system providing real-time health monitoring, disease prediction, interactive chatbot support, and gamified health tracking for patients and doctors.",
+      tags: ["React.js", "React Native", "Node.js", "Python", "Machine Learning", "Firebase", "IoT", "Chatbot", "Healthcare"],
+      github: "https://github.com/bunnysunny24/Evo-Doc"
+    },
+    {
+      id: 10,
+      title: "Searching Techniques: Pac-Man BFS & A* Pathfinding Visualizer",
+      category: "AI & Algorithms",
+      image: "/Screenshot 2025-05-08 231803.png",
+      description: "Interactive visualizer demonstrating AI searching algorithms with a Pac-Man game using BFS for ghost pathfinding and an A* algorithm visualizer for optimal path discovery.",
+      tags: ["React.js", "BFS Algorithm", "A* Pathfinding", "Framer Motion", "JavaScript", "Grid-Based Movement", "Pathfinding", "Game Development"],
+      github: "https://github.com/bunnysunny24/Searching_techniques"
+    },
+    {
+      id: 11,
+      title: "Fire Detection and Alarm System",
+      category: "IoT & Hardware",
+      image: "/dev.webp",
+      description: "An Arduino-based fire detection system with real-time monitoring via LCD display that detects fire intensity levels and triggers appropriate alerts through buzzer and LED indicators.",
+      tags: ["Arduino", "IoT", "Fire Sensor", "I2C LCD", "Hardware", "Electronics", "Embedded Systems"],
+      github: "https://github.com/bunnysunny24/fire-alarm"
+    },
+    {
+      id: 12,
+      title: "QuickCart: E-commerce Website",
+      category: "Frontend",
+      image: "/Screenshot 2025-05-08 232351.png",
+      description: "A modern, beautiful e-commerce web application featuring a fully functional shopping cart, product filtering, user authentication, and payment gateway integration.",
+      tags: ["React.js", "Tailwind CSS", "React Router", "Shopping Cart", "Authentication", "Payment Gateway", "Responsive Design"],
+      github: "https://github.com/bunnysunny24/QuickCart"
+    },
+    {
+      id: 13,
       title: "Portfolio Website",
       category: "Frontend",
       image: "/dev.webp",
@@ -95,7 +131,7 @@ function AllProjects() {
       github: "https://github.com/bunnysunny24/portfolio-new"
     },
     {
-      id: 10,
+      id: 14,
       title: "Weather Forecast App",
       category: "Frontend",
       image: "/dev.webp",
