@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem('darkMode') === 'true' || 
-    (localStorage.getItem('darkMode') === null && 
-     window.matchMedia('(prefers-color-scheme: dark)').matches)
-  );
+  const { darkMode, toggleDarkMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,22 +37,11 @@ function Navbar() {
     };
   }, [scrolled, activeSection]);
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('darkMode', darkMode);
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
   return (
     <nav className={`py-4 fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-3 dark:bg-gray-900/90' : 'bg-transparent py-4'
+      scrolled 
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-3' 
+        : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Logo on left */}
@@ -109,7 +95,7 @@ function Navbar() {
               <a 
                 key={social}
                 href={`#${social}`} 
-                className="text-gray-500 hover:text-primary transition-all duration-300"
+                className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-all duration-300"
                 aria-label={social}
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -122,27 +108,32 @@ function Navbar() {
             ))}
           </div>
           
-          {/* Dark mode toggle */}
+          {/* Dark mode toggle - Enhanced version */}
           <button
             onClick={toggleDarkMode}
-            className="w-12 h-6 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center transition duration-300 focus:outline-none shadow"
+            className="w-12 h-6 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center transition duration-300 focus:outline-none shadow relative"
             aria-label="Toggle Dark Mode"
           >
+            <span className="sr-only">{darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
+            
+            {/* Sun and moon icons for better visibility */}
+            <span className={`absolute left-1 top-1 text-yellow-500 transition-opacity duration-300 ${darkMode ? 'opacity-0' : 'opacity-100'}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+              </svg>
+            </span>
+            <span className={`absolute right-1 top-1 text-gray-100 transition-opacity duration-300 ${darkMode ? 'opacity-100' : 'opacity-0'}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
+            </span>
+            
+            {/* Toggle circle */}
             <div 
               className={`w-6 h-6 relative rounded-full transition duration-500 transform ${
                 darkMode ? 'translate-x-6 bg-primary' : 'translate-x-0 bg-white'
-              } p-1 text-white flex justify-center items-center`}
-            >
-              {darkMode ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                </svg>
-              )}
-            </div>
+              } shadow-md z-10`}
+            ></div>
           </button>
         </div>
       </div>
@@ -194,7 +185,7 @@ function Navbar() {
                 <a 
                   key={social}
                   href={`#${social}`} 
-                  className="text-gray-500 hover:text-primary transition-all duration-300"
+                  className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-all duration-300"
                   aria-label={social}
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -207,22 +198,27 @@ function Navbar() {
               ))}
             </div>
             
-            {/* Mobile dark mode toggle */}
+            {/* Mobile dark mode toggle - improved visually */}
             <div className="mt-8">
               <button
                 onClick={toggleDarkMode}
-                className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300"
+                className="flex items-center space-x-3 py-2 px-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm text-gray-700 dark:text-gray-300 transition-colors duration-300"
               >
-                <span>{darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
-                <div 
-                  className={`w-10 h-5 rounded-full flex items-center ${darkMode ? 'bg-primary' : 'bg-gray-300'} transition-colors duration-300`}
-                >
-                  <div 
-                    className={`w-4 h-4 rounded-full bg-white transform transition-transform duration-300 ${
-                      darkMode ? 'translate-x-5' : 'translate-x-1'
-                    }`}
-                  ></div>
-                </div>
+                {darkMode ? (
+                  <>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                    </svg>
+                    <span>Switch to Light Mode</span>
+                  </>
+                ) : (
+                  <>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                    <span>Switch to Dark Mode</span>
+                  </>
+                )}
               </button>
             </div>
           </div>

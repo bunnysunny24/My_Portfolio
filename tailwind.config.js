@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class', // Class-based dark mode
   theme: {
     extend: {
       colors: {
@@ -16,6 +17,9 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle at 90% 70%, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 50%)',
+        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E\")",
+        'grid-light': "linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px)",
+        'grid-dark': "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -43,6 +47,7 @@ module.exports = {
         'slide-up-fade': 'slideUpFade 0.8s ease-out forwards',
         'zoom-in': 'zoomIn 0.8s ease-out forwards',
         'slide-bottom': 'slideBottom 1.2s ease-out forwards',
+        'parallax': 'parallax 4s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -110,6 +115,13 @@ module.exports = {
           '0%': { transform: 'translateY(100%)', opacity: 0 },
           '100%': { transform: 'translateY(0)', opacity: 1 },
         },
+        parallax: {
+          '0%': { transform: 'translateX(0) translateY(0)' },
+          '25%': { transform: 'translateX(5px) translateY(-5px)' },
+          '50%': { transform: 'translateX(0) translateY(0)' },
+          '75%': { transform: 'translateX(-5px) translateY(5px)' },
+          '100%': { transform: 'translateX(0) translateY(0)' },
+        },
       },
       boxShadow: {
         'custom': '0 4px 20px rgba(0, 0, 0, 0.08)',
@@ -122,6 +134,27 @@ module.exports = {
         'float': '0 10px 25px -5px rgba(0, 0, 0, 0.15)',
         'hover': '0 15px 30px -10px rgba(0, 0, 0, 0.2)',
         'inner-glow': 'inset 0 0 10px rgba(251, 191, 36, 0.5)',
+        'glow-primary': '0 0 15px rgba(30, 86, 49, 0.7)',
+        'glow-primary-light': '0 0 15px rgba(58, 125, 77, 0.5)',
+        'glow-accent': '0 0 15px rgba(251, 191, 36, 0.7)',
+        'glow-accent-light': '0 0 15px rgba(252, 211, 77, 0.5)',
+        'floating': '0 20px 50px -15px rgba(0, 0, 0, 0.2)',
+      },
+      borderRadius: {
+        'blob': '60% 40% 30% 70% / 60% 30% 70% 40%',
+      },
+      gridTemplateColumns: {
+        'auto-fill-sm': 'repeat(auto-fill, minmax(250px, 1fr))',
+        'auto-fill-md': 'repeat(auto-fill, minmax(350px, 1fr))',
+      },
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+        '700': '700ms',
+        '800': '800ms',
+        '900': '900ms',
+        '1500': '1500ms',
+        '2000': '2000ms',
       },
     },
   },

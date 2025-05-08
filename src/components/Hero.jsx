@@ -1,8 +1,10 @@
 // Hero.jsx
 import React, { useEffect, useRef } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 function Hero() {
   const profileImageRef = useRef(null);
+  const { darkMode } = useTheme();
 
   useEffect(() => {
     // Add floating animation to profile image
@@ -66,7 +68,9 @@ function Hero() {
             
             <a 
               href="#contact" 
-              className="px-10 py-4 rounded-full font-medium border-2 border-primary text-primary hover:text-white hover:bg-primary transition-all duration-300 flex items-center shadow-lg hover:shadow-xl"
+              className={`px-10 py-4 rounded-full font-medium border-2 border-primary text-primary hover:text-white hover:bg-primary transition-all duration-300 flex items-center shadow-lg hover:shadow-xl ${
+                darkMode ? 'dark:border-primary dark:text-primary-light dark:hover:text-white' : ''
+              }`}
               style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.03)' }}
             >
               Contact Me
@@ -82,11 +86,22 @@ function Hero() {
               <a 
                 key={social}
                 href={`#${social}`} 
-                className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700"
-                style={{ boxShadow: '0 10px 20px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03)' }}
+                className={`w-12 h-12 flex items-center justify-center rounded-full transform transition-all duration-300 hover:scale-110 hover:shadow-xl ${
+                  darkMode 
+                    ? 'bg-gray-800 hover:bg-gray-700 shadow-dark-lg' 
+                    : 'bg-white shadow-lg'
+                }`}
+                style={{ boxShadow: darkMode 
+                  ? '0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15)' 
+                  : '0 10px 20px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.03)' 
+                }}
                 aria-label={social}
               >
-                <span className={`text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-primary dark:hover:text-primary`}>
+                <span className={`transition-colors duration-300 ${
+                  darkMode 
+                    ? 'text-gray-300 hover:text-primary' 
+                    : 'text-gray-600 hover:text-primary'
+                }`}>
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     {social === 'github' && <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />}
                     {social === 'linkedin' && <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />}
@@ -101,27 +116,45 @@ function Hero() {
         
         {/* Right side with profile image and design elements */}
         <div className="relative flex justify-center items-center mt-12 md:mt-0">
-          {/* 3D effect circular background gradients - lighter version */}
-          <div className="absolute w-80 h-80 md:w-[450px] md:h-[450px] bg-gradient-to-tr from-primary/5 to-accent/5 rounded-full animate-spin-very-slow"></div>
-          <div className="absolute w-72 h-72 md:w-[400px] md:h-[400px] bg-gradient-to-bl from-accent/3 to-primary/3 rounded-full -rotate-45 animate-spin-reverse animate-very-slow"></div>
+          {/* 3D effect circular background gradients - enhanced for dark mode */}
+          <div className={`absolute w-80 h-80 md:w-[450px] md:h-[450px] rounded-full animate-spin-very-slow ${
+            darkMode 
+              ? 'bg-gradient-to-tr from-primary/15 to-accent/15' 
+              : 'bg-gradient-to-tr from-primary/5 to-accent/5'
+          }`}></div>
+          <div className={`absolute w-72 h-72 md:w-[400px] md:h-[400px] rounded-full -rotate-45 animate-spin-reverse animate-very-slow ${
+            darkMode 
+              ? 'bg-gradient-to-bl from-accent/10 to-primary/10' 
+              : 'bg-gradient-to-bl from-accent/3 to-primary/3'
+          }`}></div>
           
-          {/* 3D decorative geometric shapes - lighter version */}
+          {/* 3D decorative geometric shapes - enhanced for dark mode */}
           <div className="absolute w-full h-full max-w-md max-h-md flex items-center justify-center">
-            <div className="w-60 h-60 md:w-80 md:h-80 rotate-45 border-4 border-primary/10 rounded-xl animate-spin-reverse animate-very-slow"></div>
-            <div className="absolute w-40 h-40 md:w-60 md:h-60 -rotate-12 border-4 border-accent/10 rounded-xl animate-float animate-very-slow"></div>
+            <div className={`w-60 h-60 md:w-80 md:h-80 rotate-45 rounded-xl animate-spin-reverse animate-very-slow ${
+              darkMode ? 'border-4 border-primary/20' : 'border-4 border-primary/10'
+            }`}></div>
+            <div className={`absolute w-40 h-40 md:w-60 md:h-60 -rotate-12 rounded-xl animate-float animate-very-slow ${
+              darkMode ? 'border-4 border-accent/20' : 'border-4 border-accent/10'
+            }`}></div>
           </div>
           
-          {/* Main profile image with 3D shadow effects */}
+          {/* Main profile image with 3D shadow effects - enhanced for dark mode */}
           <div
             ref={profileImageRef}
             className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden relative z-10 animate-scale-in"
             style={{ 
               animationDelay: '0.4s',
-              boxShadow: '0 10px 50px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08)'
+              boxShadow: darkMode 
+                ? '0 10px 50px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2)' 
+                : '0 10px 50px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08)'
             }}
           >
             {/* Gradient background visible behind transparent parts of the image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-light/30 to-accent-light/30"></div>
+            <div className={`absolute inset-0 ${
+              darkMode 
+                ? 'bg-gradient-to-br from-primary-light/40 to-accent-light/40' 
+                : 'bg-gradient-to-br from-primary-light/30 to-accent-light/30'
+            }`}></div>
             
             {/* Image with transparent background - adjusted to show full head */}
             <img
@@ -134,50 +167,80 @@ function Hero() {
               }}
             />
             
-            {/* Subtle glow effect around edges */}
-            <div className="absolute inset-0 rounded-full shadow-inner-light z-20"></div>
+            {/* Subtle glow effect around edges - enhanced for dark mode */}
+            <div className={`absolute inset-0 rounded-full z-20 ${
+              darkMode ? 'shadow-inner-glow' : 'shadow-inner-light'
+            }`}></div>
             
-            {/* 3D floating accent dots */}
+            {/* 3D floating accent dots - enhanced for dark mode */}
             <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent rounded-full animate-pulse shadow-lg z-30" 
-                 style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)' }}></div>
+                 style={{ boxShadow: darkMode ? '0 4px 15px rgba(251, 191, 36, 0.3)' : '0 4px 10px rgba(0, 0, 0, 0.15)' }}></div>
             <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-primary rounded-full animate-pulse-slow shadow-lg z-30"
-                 style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)' }}></div>
+                 style={{ boxShadow: darkMode ? '0 4px 15px rgba(30, 86, 49, 0.3)' : '0 4px 10px rgba(0, 0, 0, 0.15)' }}></div>
           </div>
           
-          {/* Technology accent text elements with 3D style */}
-          <div className="absolute -top-8 right-1/4 text-xl font-mono text-primary/60 animate-fade-in">
+          {/* Technology accent text elements - enhanced for dark mode */}
+          <div className={`absolute -top-8 right-1/4 text-xl font-mono animate-fade-in ${
+            darkMode ? 'text-primary/70' : 'text-primary/60'
+          }`}>
             &lt;TensorFlow/&gt;
           </div>
-          <div className="absolute -bottom-8 left-1/4 text-xl font-mono text-accent/60 animate-fade-in">
+          <div className={`absolute -bottom-8 left-1/4 text-xl font-mono animate-fade-in ${
+            darkMode ? 'text-accent/70' : 'text-accent/60'
+          }`}>
             &lt;scikit-learn/&gt;
           </div>
           
-          {/* 3D floating badges */}
-          <div className="absolute -right-6 bottom-1/3 bg-white shadow-xl rounded-full py-3 px-5 z-20 animate-float" 
+          {/* 3D floating badges - enhanced for dark mode */}
+          <div className={`absolute -right-6 bottom-1/3 z-20 animate-float rounded-full py-3 px-5 ${
+            darkMode ? 'bg-gray-800 shadow-dark-xl' : 'bg-white shadow-xl' 
+          }`} 
                style={{ 
                  animationDelay: '0.8s',
-                 boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05)'
+                 boxShadow: darkMode 
+                   ? '0 10px 25px rgba(0, 0, 0, 0.25), 0 8px 10px rgba(0, 0, 0, 0.15)' 
+                   : '0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05)'
                }}>
             <div className="text-center">
-              <span className="block text-base font-bold text-primary">1</span>
-              <span className="block text-xs text-gray-600">Experience</span>
+              <span className={`block text-base font-bold ${
+                darkMode ? 'text-primary-light' : 'text-primary'
+              }`}>1 YR+</span>
+              <span className={`block text-xs ${
+                darkMode ? 'text-gray-300' : 'text-gray-600'
+              }`}>Experience</span>
             </div>
           </div>
           
-          <div className="absolute -left-6 top-1/3 bg-white shadow-xl rounded-full py-3 px-5 z-20 animate-float" 
+          <div className={`absolute -left-6 top-1/3 z-20 animate-float rounded-full py-3 px-5 ${
+            darkMode ? 'bg-gray-800 shadow-dark-xl' : 'bg-white shadow-xl'
+          }`} 
                style={{ 
                  animationDelay: '0.6s',
-                 boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05)'  
+                 boxShadow: darkMode 
+                   ? '0 10px 25px rgba(0, 0, 0, 0.25), 0 8px 10px rgba(0, 0, 0, 0.15)' 
+                   : '0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05)'  
                }}>
             <div className="text-center">
-              <span className="block text-base font-bold text-primary">20+</span>
-              <span className="block text-xs text-gray-600">Projects</span>
+              <span className={`block text-base font-bold ${
+                darkMode ? 'text-primary-light' : 'text-primary'
+              }`}>20+</span>
+              <span className={`block text-xs ${
+                darkMode ? 'text-gray-300' : 'text-gray-600'
+              }`}>Projects</span>
             </div>
           </div>
           
-          {/* Additional 3D elements */}
-          <div className="absolute top-1/4 -right-10 w-24 h-24 rounded-lg bg-gradient-to-tr from-primary/5 to-accent/10 rotate-12 animate-float-slow"></div>
-          <div className="absolute bottom-1/4 -left-10 w-20 h-20 rounded-lg bg-gradient-to-bl from-accent/5 to-primary/10 -rotate-12 animate-float-slow"></div>
+          {/* Additional 3D elements - enhanced for dark mode */}
+          <div className={`absolute top-1/4 -right-10 w-24 h-24 rounded-lg rotate-12 animate-float-slow ${
+            darkMode 
+              ? 'bg-gradient-to-tr from-primary/10 to-accent/15' 
+              : 'bg-gradient-to-tr from-primary/5 to-accent/10'
+          }`}></div>
+          <div className={`absolute bottom-1/4 -left-10 w-20 h-20 rounded-lg -rotate-12 animate-float-slow ${
+            darkMode 
+              ? 'bg-gradient-to-bl from-accent/10 to-primary/15' 
+              : 'bg-gradient-to-bl from-accent/5 to-primary/10'
+          }`}></div>
         </div>
       </div>
     </div>
