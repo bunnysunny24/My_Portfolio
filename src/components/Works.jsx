@@ -8,7 +8,7 @@ function Works() {
       id: 1,
       title: "AgriSync: AI-Powered Smart Farming & Marketplace System",
       category: "Full Stack",
-      image: "/dev.webp",
+      image: "/image.png",
       description: "A smart agriculture platform leveraging AI/ML, Deep Learning, and Blockchain to empower farmers with real-time insights, disease detection, and transparent crop transactions.",
       tags: ["React.js", "TensorFlow", "FastAPI", "Solidity", "Ethereum", "Machine Learning", "Deep Learning", "Smart Contracts", "XGBoost", "EfficientNet", "CNN", "Random Forest", "Tailwind CSS"],
       link: "https://agri-sync.vercel.app",
@@ -129,7 +129,12 @@ function Works() {
               
               {/* Link with arrow */}
               <div className="mt-6 flex justify-end">
-                <a href={`#project-${project.id}`} className="flex items-center text-primary font-medium hover:text-accent transition-colors duration-300 group/link">
+                <a 
+                  href={project.github || project.link || `#project-${project.id}`} 
+                  className="flex items-center text-primary font-medium hover:text-accent transition-colors duration-300 group/link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span>See Details</span>
                   <svg className="w-5 h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
