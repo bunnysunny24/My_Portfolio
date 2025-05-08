@@ -16,11 +16,13 @@ function Works() {
     },
     {
       id: 2,
-      title: "E-Commerce Website",
-      category: "Web Development",
-      image: "/dev.webp",
-      description: "A fully responsive e-commerce platform with shopping cart functionality.",
-      tags: ["React", "Node.js", "MongoDB"]
+      title: "BluePulse: Smart Water Management System",
+      category: "IoT & ML",
+      image: "/Screenshot 2025-05-08 223845.png",
+      description: "An IoT and machine learning-based water management system for real-time monitoring, leakage detection, and usage analytics with interactive visualization dashboard.",
+      tags: ["IoT", "ESP32", "Machine Learning", "React.js", "MySQL", "Python", "Data Visualization", "Firebase", "Scikit-learn"],
+      link: "https://blue-pulse-zeta.vercel.app",
+      github: "https://github.com/bunnysunny24/BluePulse"
     },
     {
       id: 3,
