@@ -6,6 +6,16 @@ function Works() {
   const projects = [
     {
       id: 1,
+      title: "AgriSync: AI-Powered Smart Farming & Marketplace System",
+      category: "Full Stack",
+      image: "/dev.webp",
+      description: "A smart agriculture platform leveraging AI/ML, Deep Learning, and Blockchain to empower farmers with real-time insights, disease detection, and transparent crop transactions.",
+      tags: ["React.js", "TensorFlow", "FastAPI", "Solidity", "Blockchain", "Tailwind CSS"],
+      link: "https://agri-sync.vercel.app",
+      github: "https://github.com/bunnysunny24/AgriSync"
+    },
+    {
+      id: 2,
       title: "E-Commerce Website",
       category: "Web Development",
       image: "/dev.webp",
@@ -13,7 +23,7 @@ function Works() {
       tags: ["React", "Node.js", "MongoDB"]
     },
     {
-      id: 2,
+      id: 3,
       title: "Travel App",
       category: "Mobile App",
       image: "/dev.webp",
@@ -21,7 +31,7 @@ function Works() {
       tags: ["React Native", "Firebase", "Google Maps API"]
     },
     {
-      id: 3,
+      id: 4,
       title: "Portfolio Design",
       category: "UI/UX",
       image: "/dev.webp",
@@ -29,7 +39,7 @@ function Works() {
       tags: ["Figma", "Adobe XD", "Photoshop"]
     },
     {
-      id: 4,
+      id: 5,
       title: "Admin Dashboard",
       category: "Web Development",
       image: "/dev.webp",
@@ -38,7 +48,7 @@ function Works() {
     }
   ];
 
-  const categories = ['all', 'Web Development', 'Mobile App', 'UI/UX'];
+  const categories = ['all', 'Web Development', 'Mobile App', 'UI/UX', 'Full Stack'];
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
