@@ -26,11 +26,12 @@ function Works() {
     },
     {
       id: 3,
-      title: "Travel App",
-      category: "Mobile App",
-      image: "/dev.webp",
-      description: "Interactive travel application with location-based recommendations.",
-      tags: ["React Native", "Firebase", "Google Maps API"]
+      title: "OnBoardX: IoT-Based Vehicle Monitoring System",
+      category: "IoT & ML",
+      image: "/Screenshot 2025-05-08 224147.png",
+      description: "A real-time IoT-based vehicle monitoring system integrating ESP32, Raspberry Pi, and ML for safety alerts, accident detection, and emergency response.",
+      tags: ["Python", "Raspberry Pi", "ESP32", "FastAPI", "Flask", "Machine Learning", "Firebase", "React Native", "ReactJS", "IoT", "Real-time Analytics"],
+      github: "https://github.com/bunnysunny24/Project-OnBoardX"
     },
     {
       id: 4,
