@@ -35,19 +35,30 @@ function Works() {
     },
     {
       id: 4,
-      title: "Portfolio Design",
-      category: "UI/UX",
-      image: "/dev.webp",
-      description: "Clean and modern portfolio design for creative professionals.",
-      tags: ["Figma", "Adobe XD", "Photoshop"]
+      title: "Eco-eats: Food Wastage Distribution System",
+      category: "Desktop Application",
+      image: "/Screenshot 2025-05-08 224741.png",
+      description: "A Java-based application that connects food providers with collectors to reduce food waste through an efficient distribution system with integrated mapping.",
+      tags: ["Java", "JavaFX", "MySQL", "JDBC", "OpenStreetMap", "OOP", "Database Management", "GIS"],
+      github: "https://github.com/bunnysunny24/Eco-eats"
     },
     {
       id: 5,
-      title: "Admin Dashboard",
-      category: "Web Development",
-      image: "/dev.webp",
-      description: "Comprehensive admin dashboard with data visualization.",
-      tags: ["Vue.js", "D3.js", "TailwindCSS"]
+      title: "QuestEd: AI-Powered Personalized Learning Platform",
+      category: "Ed-Tech",
+      image: "/Screenshot 2025-05-08 225101.png",
+      description: "A comprehensive learning platform that personalizes content for engineering students while supporting teachers with resource sharing and analytics.",
+      tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Gemini API", "FastAPI", "Gamification", "Machine Learning", "Facial Recognition"],
+      github: "https://github.com/bunnysunny24/QuestEd"
+    },
+    {
+      id: 6,
+      title: "Vibeout: Emotion-Based Workout Assistant",
+      category: "AI & IoT",
+      image: "/Screenshot 2025-05-08 225442.png",
+      description: "An innovative platform that analyzes users' emotional states through facial recognition and voice analysis to personalize workout experiences with safety monitoring.",
+      tags: ["Emotion AI", "CNN", "EfficientNet B0", "React.js", "FastAPI", "IoT Sensors", "Classification", "Facial Recognition", "Voice Analysis"],
+      github: "https://github.com/bunnysunny24/Vibeout"
     }
   ];
 
