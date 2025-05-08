@@ -148,6 +148,24 @@ function AllProjects() {
       tags: ["React", "Dart", "Tailwind CSS", "Supply Chain", "User Role Management", "Inventory Management", "Web Application"],
       link: "https://scm-react.vercel.app/",
       github: "https://github.com/bunnysunny24/Supply-Chain-Management"
+    },
+    {
+      id: 16,
+      title: "Morse Code Converter",
+      category: "AI & ML",
+      image: "/dev.webp",
+      description: "A versatile Morse code conversion tool supporting text-to-Morse, Morse-to-text, and audio conversion with neural network-based processing for accurate translations.",
+      tags: ["React", "Machine Learning", "Deep Learning", "Neural Network", "TensorFlow", "FastAPI", "Audio Processing"],
+      github: "https://github.com/bunnysunny24/Morse_Code"
+    },
+    {
+      id: 17,
+      title: "Procedural Art Generator",
+      category: "Mobile App",
+      image: "/Screenshot 2025-05-08 233901.png",
+      description: "A sleek, intuitive Flutter app that transforms mathematical algorithms into stunning visual art through an interactive canvas, customizable parameters, and powerful export options.",
+      tags: ["Flutter", "Dart", "Generative Art", "Creative Coding", "Algorithms", "Mobile Development", "Offline App"],
+      github: "https://github.com/bunnysunny24/Procedural-Art-Generator"
     }
   ];
 
