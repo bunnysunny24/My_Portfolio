@@ -10,7 +10,7 @@ function Works() {
       category: "Full Stack",
       image: "/dev.webp",
       description: "A smart agriculture platform leveraging AI/ML, Deep Learning, and Blockchain to empower farmers with real-time insights, disease detection, and transparent crop transactions.",
-      tags: ["React.js", "TensorFlow", "FastAPI", "Solidity", "Blockchain", "Tailwind CSS"],
+      tags: ["React.js", "TensorFlow", "FastAPI", "Solidity", "Ethereum", "Machine Learning", "Deep Learning", "Smart Contracts", "XGBoost", "EfficientNet", "CNN", "Random Forest", "Tailwind CSS"],
       link: "https://agri-sync.vercel.app",
       github: "https://github.com/bunnysunny24/AgriSync"
     },
