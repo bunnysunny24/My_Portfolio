@@ -123,20 +123,21 @@ function AllProjects() {
     },
     {
       id: 13,
-      title: "Portfolio Website",
-      category: "Frontend",
-      image: "/dev.webp",
-      description: "A responsive portfolio website built with React.js and Tailwind CSS featuring dark mode, animations, and responsive design.",
-      tags: ["React.js", "Tailwind CSS", "Responsive Design", "Animation", "Dark Mode"],
-      github: "https://github.com/bunnysunny24/portfolio-new"
+      title: "ClimaSync: Weather Forecasting Tool",
+      category: "ML & Data Visualization",
+      image: "/Screenshot 2025-05-08 232704.png",
+      description: "An intelligent weather forecasting application that predicts weather parameters using machine learning models and provides interactive data visualization with sorting algorithms.",
+      tags: ["Python", "FastAPI", "React.js", "Tailwind CSS", "Machine Learning", "Random Forest", "Data Visualization", "Sorting Algorithms"],
+      github: "https://github.com/bunnysunny24/ClimaSync"
     },
     {
       id: 14,
-      title: "Weather Forecast App",
-      category: "Frontend",
+      title: "AI-Driven CRM",
+      category: "AI & Data Analytics",
       image: "/dev.webp",
-      description: "A weather forecast application that provides real-time weather updates and forecasts for multiple locations.",
-      tags: ["React.js", "Weather API", "JavaScript", "CSS", "Responsive Design"]
+      description: "An intelligent CRM platform that analyzes customer inputs and reviews, filtering those with specific interests and presenting insights through an interactive dashboard with chatbot integration.",
+      tags: ["React", "Python", "FastAPI", "Web Scraping", "Chatbot", "LinkedIn API", "Facebook API", "Google API", "Gmail API", "Data Analytics"],
+      github: "https://github.com/bunnysunny24/AI-Driven-CRM"
     }
   ];
 
