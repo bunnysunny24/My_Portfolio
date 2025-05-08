@@ -166,6 +166,25 @@ function AllProjects() {
       description: "A sleek, intuitive Flutter app that transforms mathematical algorithms into stunning visual art through an interactive canvas, customizable parameters, and powerful export options.",
       tags: ["Flutter", "Dart", "Generative Art", "Creative Coding", "Algorithms", "Mobile Development", "Offline App"],
       github: "https://github.com/bunnysunny24/Procedural-Art-Generator"
+    },
+    {
+      id: 18,
+      title: "Digital Wellbeing Dashboard",
+      category: "Mobile App",
+      image: "/Screenshot 2025-05-08 234139.png",
+      description: "A React Native application that helps users track and manage their digital habits with visual insights, goal setting features, and focus mode scheduling for healthier technology use.",
+      tags: ["React Native", "Android Studio", "Mobile Development", "Data Visualization", "Habit Tracking", "UI/UX", "Digital Wellness"],
+      github: "https://github.com/bunnysunny24/Digital-Wellbeing-Dashboard"
+    },
+    {
+      id: 19,
+      title: "Smart Agriculture System",
+      category: "IoT & ML",
+      image: "/Screenshot 2025-05-08 234358.png",
+      description: "A compact, cost-effective IoT solution for real-time environmental monitoring in agriculture using Arduino Nano, ESP32, and multiple sensors for tracking air quality, temperature, humidity, and soil moisture.",
+      tags: ["Arduino", "ESP32", "IoT", "React", "JavaScript", "Firebase", "Sensors", "FastAPI", "Machine Learning", "Environmental Monitoring"],
+      link: "https://smart-agri-culture.vercel.app",
+      github: "https://github.com/bunnysunny24/Smart-AgriCulture"
     }
   ];
 
