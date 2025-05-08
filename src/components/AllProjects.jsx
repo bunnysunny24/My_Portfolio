@@ -138,6 +138,16 @@ function AllProjects() {
       description: "An intelligent CRM platform that analyzes customer inputs and reviews, filtering those with specific interests and presenting insights through an interactive dashboard with chatbot integration.",
       tags: ["React", "Python", "FastAPI", "Web Scraping", "Chatbot", "LinkedIn API", "Facebook API", "Google API", "Gmail API", "Data Analytics"],
       github: "https://github.com/bunnysunny24/AI-Driven-CRM"
+    },
+    {
+      id: 15,
+      title: "Supply Chain Management",
+      category: "Full Stack",
+      image: "/Screenshot 2025-05-08 233425.png",
+      description: "A comprehensive end-to-end supply chain management system with separate interfaces for Administrators, Suppliers, and Customers to streamline business operations.",
+      tags: ["React", "Dart", "Tailwind CSS", "Supply Chain", "User Role Management", "Inventory Management", "Web Application"],
+      link: "https://scm-react.vercel.app/",
+      github: "https://github.com/bunnysunny24/Supply-Chain-Management"
     }
   ];
 
