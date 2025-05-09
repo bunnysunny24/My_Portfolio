@@ -65,10 +65,7 @@ function Footer() {
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#testimonial" className="text-gray-600 hover:text-primary transition-colors duration-300 relative group">
-              Testimonial
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            
             <a href="#contact" className="text-gray-600 hover:text-primary transition-colors duration-300 relative group">
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -224,7 +221,7 @@ function Footer() {
         {/* Copyright and terms */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-8 text-gray-500 text-sm animate-fade-in opacity-0" style={{animationDelay: '0.8s'}}>
           <div className="mb-4 md:mb-0">
-            &copy; {currentYear} Albert Johnson. All rights reserved.
+            &copy; {currentYear} Bhavashesh D. All rights reserved.
           </div>
           
           <div className="flex space-x-6">
