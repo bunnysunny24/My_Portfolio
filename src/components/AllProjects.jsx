@@ -185,6 +185,15 @@ function AllProjects() {
       tags: ["Arduino", "ESP32", "IoT", "React", "JavaScript", "Firebase", "Sensors", "FastAPI", "Machine Learning", "Environmental Monitoring"],
       link: "https://smart-agri-culture.vercel.app",
       github: "https://github.com/bunnysunny24/Smart-AgriCulture"
+    },
+    {
+      id: 20,
+      title: "RoomiePay: Fair Settlements Made Easy",
+      category: "Full Stack",
+      image: "/Screenshot 2025-05-09 105354.png",
+      description: "A convenient expense tracking and settlement application designed for roommates to manage shared expenses, split bills fairly, and track payment history.",
+      tags: ["Python", "React.js", "MySQL", "FastAPI", "Expense Tracking", "Payment Settlement", "Financial Management"],
+      github: "https://github.com/bunnysunny24/RoomiePay"
     }
   ];
 
