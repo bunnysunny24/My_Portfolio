@@ -63,7 +63,7 @@ function Works() {
     }
   ];
 
-  const categories = ['all', 'Web Development', 'Mobile App', 'UI/UX', 'Full Stack'];
+  const categories = ['all', 'Full Stack', 'IoT & ML', 'AI & IoT', 'Frontend', 'Mobile App', 'Desktop Application', 'Ed-Tech'];
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);

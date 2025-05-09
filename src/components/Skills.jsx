@@ -5,14 +5,14 @@ function Skills() {
   const skillBarsRef = useRef([]);
 
   const skills = [
-    { name: "HTML", level: 95, color: "primary" },
-    { name: "CSS", level: 90, color: "primary" },
+    { name: "Python", level: 90, color: "primary" },
+    { name: "React.js", level: 88, color: "primary" },
+    { name: "Machine Learning", level: 85, color: "primary" },
     { name: "JavaScript", level: 85, color: "primary" },
-    { name: "React", level: 80, color: "primary" },
-    { name: "Node.js", level: 75, color: "accent" },
+    { name: "TensorFlow", level: 80, color: "accent" },
     { name: "Tailwind CSS", level: 85, color: "accent" },
-    { name: "UI/UX Design", level: 70, color: "accent" },
-    { name: "Figma", level: 65, color: "accent" }
+    { name: "FastAPI", level: 82, color: "accent" },
+    { name: "IoT (Arduino/ESP32)", level: 78, color: "accent" }
   ];
 
   // Animate skill bars when they come into view
@@ -94,8 +94,8 @@ function Skills() {
               </h3>
               
               <div className="flex flex-wrap justify-center gap-4 animate-fade-in opacity-0" style={{animationDelay: '0.5s'}}>
-                {["Redux", "TypeScript", "SASS", "Git", "Webpack", "Firebase", 
-                  "MongoDB", "GraphQL", "Next.js", "Express", "Material UI", "Bootstrap"].map((tech, index) => (
+                {["Flutter", "Solidity", "Blockchain", "React Native", "Deep Learning", "Node.js", 
+                  "MongoDB", "MySQL", "OpenCV", "Scikit-learn", "XGBoost", "EfficientNet", "Raspberry Pi"].map((tech, index) => (
                   <span 
                     key={index} 
                     className="relative group overflow-hidden"

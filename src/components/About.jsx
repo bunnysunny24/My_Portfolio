@@ -97,22 +97,22 @@ function About() {
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-                    <span className="text-accent mr-1">✦</span> Web Design
+                    <span className="text-accent mr-1">✦</span> AI & ML
                   </span>
                   <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-                    <span className="text-accent mr-1">✦</span> UX/UI
+                    <span className="text-accent mr-1">✦</span> IoT Systems
                   </span>
                   <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-                    <span className="text-accent mr-1">✦</span> Animations
+                    <span className="text-accent mr-1">✦</span> Full Stack Dev
                   </span>
                   <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-                    <span className="text-accent mr-1">✦</span> React
+                    <span className="text-accent mr-1">✦</span> Deep Learning
                   </span>
                   <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-                    <span className="text-accent mr-1">✦</span> Photography
+                    <span className="text-accent mr-1">✦</span> Blockchain
                   </span>
                   <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
-                    <span className="text-accent mr-1">✦</span> Travel
+                    <span className="text-accent mr-1">✦</span> Mobile Apps
                   </span>
                 </div>
               </div>
