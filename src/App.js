@@ -39,7 +39,11 @@ function App() {
           {/* All Projects Page Route */}
           <Route path="/projects" element={
             <div className="relative min-h-screen overflow-x-hidden font-sans bg-white dark:bg-gray-900 transition-colors duration-300">
-              <AllProjects />
+              <Background />
+              <div className="relative z-10 px-4 md:px-12 lg:px-20">
+                <Navbar />
+                <AllProjects />
+              </div>
             </div>
           } />
         </Routes>

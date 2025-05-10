@@ -54,13 +54,13 @@ function Skills() {
             Technical Expertise
             <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-accent rounded-full"></span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto mt-8 text-gray-600">
+          <p className="text-lg max-w-2xl mx-auto mt-8 text-gray-600 dark:text-gray-300">
             I've worked with a variety of technologies in the web development world.
             Here are my main areas of expertise.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-card p-10 relative overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-card p-10 relative overflow-hidden">
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-primary/5 -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-accent/5 translate-y-1/3 -translate-x-1/3"></div>
@@ -72,11 +72,11 @@ function Skills() {
                   <div className="flex justify-between mb-2">
                     <div className="flex items-center">
                       <div className={`w-2 h-8 bg-${skill.color} mr-3 rounded-sm`}></div>
-                      <span className="font-medium text-lg">{skill.name}</span>
+                      <span className="font-medium text-lg dark:text-white">{skill.name}</span>
                     </div>
                     <span className={`font-medium text-${skill.color} text-lg`}>{skill.level}%</span>
                   </div>
-                  <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
+                  <div className="h-3 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
                     <div 
                       className={`skill-progress-inner h-full bg-${skill.color} rounded-full transition-all duration-1000 ease-out opacity-0 w-0`}
                       data-level={skill.level}
@@ -87,7 +87,7 @@ function Skills() {
             </div>
 
             <div className="mt-16 relative">
-              <h3 className="text-2xl font-bold text-center mb-8 flex items-center justify-center">
+              <h3 className="text-2xl font-bold text-center mb-8 flex items-center justify-center dark:text-white">
                 <span className="w-8 h-0.5 bg-accent mr-3"></span>
                 Other Technologies I Work With
                 <span className="w-8 h-0.5 bg-accent ml-3"></span>
@@ -123,7 +123,7 @@ function Skills() {
         <div className="text-center mt-12">
           <a 
             href="#" 
-            className="group inline-flex items-center gap-2 bg-white text-primary hover:text-accent border border-primary/20 px-8 py-3 rounded-full font-medium transition-colors duration-300 shadow-sm hover:shadow-md"
+            className="group inline-flex items-center gap-2 bg-white dark:bg-gray-800 text-primary hover:text-accent border border-primary/20 px-8 py-3 rounded-full font-medium transition-colors duration-300 shadow-sm hover:shadow-md dark:text-accent"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

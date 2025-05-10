@@ -226,9 +226,9 @@ function AllProjects() {
   }, [searchTerm, activeFilter]);
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
+    <div className={`min-h-screen pt-16 md:pt-24 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
       {/* Header with Back Button */}
-      <div className="container mx-auto pt-8 px-4">
+      <div className="container mx-auto px-4">
         <Link 
           to="/" 
           className={`flex items-center text-primary hover:text-accent transition-colors mb-6`}
@@ -244,7 +244,7 @@ function AllProjects() {
       </div>
       
       {/* Search and Filter Tools */}
-      <div className={`sticky top-0 z-30 py-4 ${darkMode ? 'bg-gray-900/95' : 'bg-white/95'} backdrop-blur-md`}>
+      <div className={`sticky top-16 md:top-20 z-30 py-4 ${darkMode ? 'bg-gray-900/95' : 'bg-white/95'} backdrop-blur-md`}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between gap-4">
             {/* Search Bar */}
