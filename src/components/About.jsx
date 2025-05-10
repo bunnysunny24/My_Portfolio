@@ -74,19 +74,19 @@ function About() {
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Name:</span> 
-                    <span className="text-gray-700">Albert Johnson</span>
+                    <span className="text-gray-700">Bhavashesh D</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Email:</span> 
-                    <a href="mailto:albert@example.com" className="text-gray-700 hover:text-accent transition-colors duration-300">albert@example.com</a>
+                    <a href="mailto:albert@example.com" className="text-gray-700 hover:text-accent transition-colors duration-300">bhavashesh@gmail.com</a>
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Phone:</span> 
-                    <a href="tel:+11234567890" className="text-gray-700 hover:text-accent transition-colors duration-300">+1 (123) 456-7890</a>
+                    <a href="tel:+11234567890" className="text-gray-700 hover:text-accent transition-colors duration-300">+(91) 9849800511</a>
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Location:</span> 
-                    <span className="text-gray-700">New York, USA</span>
+                    <span className="text-gray-700">Hyderabad, Telangana</span>
                   </li>
                 </ul>
               </div>
