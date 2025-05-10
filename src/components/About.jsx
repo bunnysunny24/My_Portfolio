@@ -74,19 +74,19 @@ function About() {
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Name:</span> 
-                    <span className="text-gray-700">Bhavashesh D</span>
+                    <span className="text-gray-700 dark:text-white">Bhavashesh D</span>
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Email:</span> 
-                    <a href="mailto:albert@example.com" className="text-gray-700 hover:text-accent transition-colors duration-300">bhavashesh@gmail.com</a>
+                    <a href="mailto:bhavashesh@gmail.com" className="text-gray-700 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300">bhavashesh@gmail.com</a>
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Phone:</span> 
-                    <a href="tel:+11234567890" className="text-gray-700 hover:text-accent transition-colors duration-300">+(91) 9849800511</a>
+                    <a href="tel:+919849800511" className="text-gray-700 dark:text-white hover:text-accent dark:hover:text-accent transition-colors duration-300">+(91) 9849800511</a>
                   </li>
                   <li className="flex items-center">
                     <span className="text-primary w-24 font-medium">Location:</span> 
-                    <span className="text-gray-700">Hyderabad, Telangana</span>
+                    <span className="text-gray-700 dark:text-white">Hyderabad, Telangana</span>
                   </li>
                 </ul>
               </div>
@@ -96,22 +96,22 @@ function About() {
                   My Interests
                 </h4>
                 <div className="flex flex-wrap gap-3">
-                  <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+                  <span className="bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 dark:text-white">
                     <span className="text-accent mr-1">✦</span> AI & ML
                   </span>
-                  <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+                  <span className="bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 dark:text-white">
                     <span className="text-accent mr-1">✦</span> IoT Systems
                   </span>
-                  <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+                  <span className="bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 dark:text-white">
                     <span className="text-accent mr-1">✦</span> Full Stack Dev
                   </span>
-                  <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+                  <span className="bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 dark:text-white">
                     <span className="text-accent mr-1">✦</span> Deep Learning
                   </span>
-                  <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+                  <span className="bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 dark:text-white">
                     <span className="text-accent mr-1">✦</span> Blockchain
                   </span>
-                  <span className="bg-white px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+                  <span className="bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 dark:border-gray-700 dark:text-white">
                     <span className="text-accent mr-1">✦</span> Mobile Apps
                   </span>
                 </div>
