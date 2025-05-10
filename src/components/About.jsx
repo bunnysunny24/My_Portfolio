@@ -120,8 +120,8 @@ function About() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/bhavashesh_resume.pdf" 
-                download="bhavashesh_resume.pdf"
+                href="/Bhavashesh_RESUME_Final.pdf" 
+                download="Bhavashesh_RESUME_Final.pdf"
                 className="group relative overflow-hidden bg-primary hover:bg-accent text-white px-8 py-3 rounded-full font-medium transition-all duration-500 transform hover:translate-y-[-3px] shadow-button flex items-center justify-center"
               >
                 <span className="mr-2">Download CV</span>
@@ -149,7 +149,7 @@ function About() {
               <div className="relative z-10 rounded-xl overflow-hidden shadow-xl">
                 <img 
                   src="/BNY-PP-300.JPG" 
-                  alt="Albert Profile" 
+                  alt="bhavashesh Profile" 
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 
