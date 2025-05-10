@@ -14,15 +14,15 @@ export const useTheme = () => {
 
 // Theme provider component
 export const ThemeProvider = ({ children }) => {
-  // Initialize theme from localStorage if available, otherwise use system preference
+  // Initialize theme from localStorage if available, otherwise use light theme by default
   const [darkMode, setDarkMode] = useState(() => {
     // Check localStorage first
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) {
       return savedMode === 'true';
     }
-    // Fall back to system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Start with light theme instead of system preference
+    return false;
   });
 
   // Toggle dark mode
@@ -48,7 +48,7 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode]);
 
-  // Listen for system theme changes
+  // Listen for system theme changes - only apply if user opts in
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     
