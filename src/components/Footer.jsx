@@ -57,16 +57,16 @@ function Footer() {
           
           {/* Quick Links */}
           <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center mb-8 md:mb-0 animate-fade-in opacity-0" style={{animationDelay: '0.2s'}}>
-            <a href="#works" className="text-gray-600 hover:text-primary transition-colors duration-300 relative group">
+            <a href="#works" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 relative group">
               Works
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className="text-gray-600 hover:text-primary transition-colors duration-300 relative group">
+            <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 relative group">
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             
-            <a href="#contact" className="text-gray-600 hover:text-primary transition-colors duration-300 relative group">
+            <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 relative group">
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -86,7 +86,7 @@ function Footer() {
                   : social === 'phone'
                   ? 'tel:9849800511'
                   : '#'}
-                className="w-10 h-10 bg-white text-primary hover:bg-primary hover:text-white rounded-full flex items-center justify-center shadow-sm transition-all duration-300 transform hover:scale-110"
+                className="w-10 h-10 bg-white dark:bg-gray-800 text-primary hover:bg-primary hover:text-white dark:hover:bg-primary rounded-full flex items-center justify-center shadow-sm transition-all duration-300 transform hover:scale-110"
                 aria-label={social}
                 target={social !== 'phone' && social !== 'gmail' ? '_blank' : '_self'}
                 rel={social !== 'phone' && social !== 'gmail' ? 'noopener noreferrer' : ''}
@@ -106,7 +106,7 @@ function Footer() {
           {/* About Column */}
           <div>
             <h4 className="text-lg font-bold text-primary mb-4">Bhavashesh</h4>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
             I'm a frontend developer and B.Tech student driven by a passion for creating elegant, intuitive, and user-focused digital experiences. I enjoy blending design with emerging technologies like AI/ML, IoT, and blockchain to build innovative solutions.
             </p>
             
@@ -126,7 +126,7 @@ function Footer() {
             <h4 className="text-lg font-bold text-primary mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -134,7 +134,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -142,7 +142,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -150,7 +150,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -165,7 +165,7 @@ function Footer() {
             <h4 className="text-lg font-bold text-primary mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -173,7 +173,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -181,7 +181,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -189,7 +189,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors duration-300 flex items-center">
+                <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 flex items-center">
                   <svg className="w-3 h-3 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -202,7 +202,7 @@ function Footer() {
           {/* Newsletter Column */}
           <div>
             <h4 className="text-lg font-bold text-primary mb-4">Stay Updated</h4>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Subscribe to my newsletter to get updates on my latest work and 
               insights on web development.
             </p>
@@ -211,7 +211,7 @@ function Footer() {
               <input 
                 type="email" 
                 placeholder="Your email" 
-                className="px-4 py-2 rounded-l-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 flex-grow bg-gray-50"
+                className="px-4 py-2 rounded-l-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 flex-grow bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
               />
               <button 
                 type="submit" 
@@ -226,7 +226,7 @@ function Footer() {
         </div>
         
         {/* Copyright and terms */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-8 text-gray-500 text-sm animate-fade-in opacity-0" style={{animationDelay: '0.8s'}}>
+        <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-8 text-gray-500 dark:text-gray-300 text-sm animate-fade-in opacity-0" style={{animationDelay: '0.8s'}}>
           <div className="mb-4 md:mb-0">
             &copy; {currentYear} Bhavashesh D. All rights reserved.
           </div>
