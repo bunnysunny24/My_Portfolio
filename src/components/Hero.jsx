@@ -50,7 +50,7 @@ function Hero() {
           </h2>
           
           <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-xl animate-fade-in" style={{ animationDelay: '0.5s', lineHeight: '1.8' }}>
-            I design and develop modern web applications with a focus on beautiful interfaces and seamless user experiences. Specialized in creating responsive websites with clean and efficient code.
+          I'm a 2nd-year B.Tech student passionate about technology and innovation. I explore frontend development, AI/ML, IoT, and blockchain to build meaningful, user-centered digital solutions.
           </p>
           
           <div className="flex flex-wrap gap-5 mt-8 animate-fade-in" style={{ animationDelay: '0.7s' }}>
