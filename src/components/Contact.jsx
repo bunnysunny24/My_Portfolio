@@ -199,7 +199,7 @@ function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 group-hover:bg-white"
-                        placeholder="John Doe"
+                        placeholder="Bhavashesh"
                         required
                       />
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -222,7 +222,7 @@ function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 group-hover:bg-white"
-                        placeholder="john@example.com"
+                        placeholder="Bhavashesh@gmail.com"
                         required
                       />
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
