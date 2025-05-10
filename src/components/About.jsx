@@ -54,14 +54,14 @@ function About() {
           {/* Left column with animated content */}
           <div className="md:w-7/12 animate-fade-in opacity-0">
             <h3 className="text-3xl font-bold text-primary mb-6">
-              I'm <span className="text-accent italic">Bhavashesh D</span>, a 
+              I'm <span className="text-accent italic">Bhavashesh D</span>,
             </h3>
             
-            <p className="text-lg mb-6 leading-relaxed text-gray-700">
+            <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-white !dark:text-white">
             I’m a 2nd-year B.Tech student with a strong passion for becoming a Full Stack Developer with AI/ML expertise. I focus on creating beautiful, functional, and intelligent digital experiences. While still learning and building my skills, I am eager to work on projects that integrate machine learning models into full-stack applications, aiming to develop scalable, data-driven, and user-centered solutions.
             </p>
             
-            <p className="text-lg mb-8 leading-relaxed text-gray-700">
+            <p className="text-lg mb-8 leading-relaxed text-gray-700 dark:text-white !dark:text-white">
             I believe that design is about solving problems and creating intuitive, enjoyable experiences for users. Whether I'm working on a website, mobile app, or other digital product, I bring my commitment to design excellence and user-centered thinking to every project.
             </p>
             

@@ -14,11 +14,6 @@ export const useTheme = () => {
 
 // Theme provider component
 export const ThemeProvider = ({ children }) => {
-  // Remove dark mode class immediately before React hydration
-  if (typeof window !== 'undefined') {
-    document.documentElement.classList.remove('dark');
-  }
-
   // Initialize theme from localStorage if available, otherwise use light theme by default
   const [darkMode, setDarkMode] = useState(() => {
     // Check localStorage first
@@ -55,15 +50,16 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode]);
 
-  // Force light theme on initial load
+  // Apply correct theme on initial load
   useEffect(() => {
-    // Apply light theme immediately on component mount
-    document.documentElement.classList.remove('dark');
-    
     // Check for stored preference after initial render
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode === 'true') {
+      document.documentElement.classList.add('dark');
       setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setDarkMode(false);
     }
   }, []);
 
