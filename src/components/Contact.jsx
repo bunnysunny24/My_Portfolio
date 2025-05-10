@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import emailjs from 'emailjs-com';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,9 +9,15 @@ function Contact() {
     message: ''
   });
   const [formStatus, setFormStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
   const formRef = useRef(null);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // EmailJS configuration
+  const SERVICE_ID = "service_6gds2hh"; // Your EmailJS service ID
+  const TEMPLATE_ID = "template_default"; // Change this to your template ID
+  const USER_ID = "user_id"; // Replace with your actual user ID if needed
 
   // Handle viewport resize and determine if mobile view
   useEffect(() => {
@@ -33,6 +40,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     
     // Form validation
     if (!formData.name || !formData.email || !formData.message) {
@@ -40,6 +48,7 @@ function Contact() {
         success: false,
         message: 'Please fill in all required fields.'
       });
+      setLoading(false);
       return;
     }
     
@@ -50,27 +59,51 @@ function Contact() {
         success: false,
         message: 'Please enter a valid email address.'
       });
+      setLoading(false);
       return;
     }
     
-    // Mock form submission
-    setFormStatus({
-      success: true,
-      message: 'Your message has been sent successfully! I will get back to you soon.'
-    });
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formData.name,
+      reply_to: formData.email,
+      subject: formData.subject || "Contact Form Submission",
+      message: formData.message
+    };
     
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    
-    // Clear status after 5 seconds
-    setTimeout(() => {
-      setFormStatus(null);
-    }, 5000);
+    // Send email using EmailJS
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        setFormStatus({
+          success: true,
+          message: 'Your message has been sent successfully! I will get back to you soon.'
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        
+      })
+      .catch((error) => {
+        console.error('Email sending failed:', error);
+        setFormStatus({
+          success: false,
+          message: 'There was an error sending your message. Please try again later.'
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+        
+        // Clear status after 5 seconds
+        setTimeout(() => {
+          setFormStatus(null);
+        }, 5000);
+      });
   };
 
   return (
@@ -214,6 +247,7 @@ function Contact() {
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 group-hover:bg-white text-sm sm:text-base"
                         placeholder="Bhavashesh"
                         required
+                        disabled={loading}
                       />
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -237,6 +271,7 @@ function Contact() {
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 group-hover:bg-white text-sm sm:text-base"
                         placeholder="Bhavashesh@gmail.com"
                         required
+                        disabled={loading}
                       />
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -259,6 +294,7 @@ function Contact() {
                     onChange={handleChange}
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 group-hover:bg-white text-sm sm:text-base"
                     placeholder="What's this regarding?"
+                    disabled={loading}
                   />
                 </div>
                 
@@ -275,19 +311,33 @@ function Contact() {
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 group-hover:bg-white text-sm sm:text-base"
                     placeholder="Your message here..."
                     required
+                    disabled={loading}
                   ></textarea>
                 </div>
                 
                 <div>
                   <button
                     type="submit"
-                    className="group relative overflow-hidden bg-primary hover:bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium transition-all duration-500 shadow-button hover:shadow-lg w-full flex items-center justify-center text-sm sm:text-base"
+                    className="group relative overflow-hidden bg-primary hover:bg-accent text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium transition-all duration-500 shadow-button hover:shadow-lg w-full flex items-center justify-center text-sm sm:text-base disabled:opacity-70 disabled:cursor-not-allowed"
+                    disabled={loading}
                   >
                     <span className="relative z-10 flex items-center">
-                      <span>Send Message</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-1.5 sm:ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
+                      {loading ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <span>Send Message</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-1.5 sm:ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </>
+                      )}
                     </span>
                     <span className="absolute inset-0 bg-accent/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                   </button>
