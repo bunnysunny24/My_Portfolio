@@ -5,14 +5,14 @@ function Skills() {
   const skillBarsRef = useRef([]);
 
   const skills = [
-    { name: "Python", level: 90, color: "primary" },
-    { name: "React.js", level: 88, color: "primary" },
-    { name: "Machine Learning", level: 85, color: "primary" },
-    { name: "JavaScript", level: 85, color: "primary" },
-    { name: "TensorFlow", level: 80, color: "accent" },
-    { name: "Tailwind CSS", level: 85, color: "accent" },
-    { name: "FastAPI", level: 82, color: "accent" },
-    { name: "IoT (Arduino/ESP32)", level: 78, color: "accent" }
+    { name: "Python", level: 85, color: "primary" },
+    { name: "React.js", level: 92, color: "primary" },
+    { name: "Machine Learning", level: 65, color: "primary" },
+    { name: "JavaScript", level: 92, color: "primary" },
+    { name: "TensorFlow", level: 68, color: "accent" },
+    { name: "Tailwind CSS", level: 100, color: "accent" },
+    { name: "FastAPI", level: 99, color: "accent" },
+    { name: "IoT (Arduino/ESP32)", level: 23, color: "accent" }
   ];
 
   // Animate skill bars when they come into view
@@ -94,8 +94,8 @@ function Skills() {
               </h3>
               
               <div className="flex flex-wrap justify-center gap-4 animate-fade-in opacity-0" style={{animationDelay: '0.5s'}}>
-                {["Flutter", "Solidity", "Blockchain", "React Native", "Deep Learning", "Node.js", 
-                  "MongoDB", "MySQL", "OpenCV", "Scikit-learn", "XGBoost", "EfficientNet", "Raspberry Pi"].map((tech, index) => (
+                {["Java","Flutter", "Solidity", "Blockchain", "React Native", "Deep Learning", "Node.js", 
+                  "MongoDB", "MySQL", "OpenCV", "Scikit-learn", "XGBoost", "EfficientNet", "Raspberry Pi","Neural Networks", "React Native"].map((tech, index) => (
                   <span 
                     key={index} 
                     className="relative group overflow-hidden"
