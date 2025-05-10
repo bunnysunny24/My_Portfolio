@@ -14,10 +14,16 @@ function Contact() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  // EmailJS configuration
+  // EmailJS configuration - updated with your actual credentials
   const SERVICE_ID = "service_6gds2hh"; // Your EmailJS service ID
-  const TEMPLATE_ID = "template_default"; // Change this to your template ID
-  const USER_ID = "user_id"; // Replace with your actual user ID if needed
+  const TEMPLATE_ID = "template_4z6xcz6"; // Updated to your default template
+  const PUBLIC_KEY = "qTVVtUCWTSQ62RME0"; // Your updated EmailJS public key
+  const PRIVATE_KEY = "BQlzBWmxfDe3JzooBZQQd"; // Your EmailJS private key
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    emailjs.init(PUBLIC_KEY);
+  }, []);
 
   // Handle viewport resize and determine if mobile view
   useEffect(() => {
@@ -63,16 +69,18 @@ function Contact() {
       return;
     }
     
-    // Prepare template parameters
+    // Prepare template parameters - configured for your template
     const templateParams = {
       from_name: formData.name,
+      to_name: "Bhavashesh", // Your name
+      from_email: formData.email,
       reply_to: formData.email,
-      subject: formData.subject || "Contact Form Submission",
+      subject: formData.subject || "Portfolio Contact Form Submission",
       message: formData.message
     };
     
     // Send email using EmailJS
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
       .then((response) => {
         console.log('Email sent successfully:', response);
         setFormStatus({

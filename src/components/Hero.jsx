@@ -50,7 +50,6 @@ function Hero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-800 dark:text-white animate-slide-down tracking-tight" style={{ animationDelay: '0.2s', letterSpacing: '-0.02em' }}>
             Hi, I'm <span className="text-primary relative inline-block">
               Developer
-              <span className="absolute -bottom-1 left-0 w-full h-1 sm:h-1.5 bg-accent"></span>
             </span>
           </h1>
           
