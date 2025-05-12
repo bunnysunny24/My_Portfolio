@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { useLocation, Link } from 'react-router-dom';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,6 +10,7 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const mobileMenuRef = useRef(null);
+  const location = useLocation();
 
   // Handle viewport resize and determine if mobile view
   useEffect(() => {
@@ -89,14 +91,14 @@ function Navbar() {
       scrolled 
         ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-3' 
         : 'bg-transparent py-4'
-    }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    }`}>      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo on left */}
         <div className="text-xl sm:text-2xl font-bold">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Bunny</span>
-          <span className="relative w-1.5 sm:w-2 h-1.5 sm:h-2 inline-block ml-1">
-            <span className="absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-primary to-accent rounded-full animate-pulse-slow"></span>
-          </span>
+          <Link to="/" className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Bunny
+            <span className="relative w-1.5 sm:w-2 h-1.5 sm:h-2 inline-block ml-1">
+              <span className="absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-primary to-accent rounded-full animate-pulse-slow"></span>
+            </span>
+          </Link>
         </div>
         
         {/* Desktop Navigation */}
@@ -104,21 +106,42 @@ function Navbar() {
           <ul className="flex space-x-6 lg:space-x-8">
             {['works', 'about', 'skills', 'contact'].map((section) => (
               <li key={section}>
-                <a 
-                  href={`#${section}`} 
-                  className={`font-medium text-sm uppercase transition-all duration-300 relative group ${
-                    activeSection === section 
-                      ? 'text-primary' 
-                      : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
-                  }`}
-                >
-                  {section}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                    activeSection === section ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
-                </a>
+                {location.pathname === "/" ? (
+                  <a 
+                    href={`#${section}`} 
+                    className={`font-medium text-sm uppercase transition-all duration-300 relative group ${
+                      activeSection === section 
+                        ? 'text-primary' 
+                        : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                    }`}
+                  >
+                    {section}
+                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                      activeSection === section ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                  </a>
+                ) : (
+                  <Link 
+                    to={`/#${section}`} 
+                    className={`font-medium text-sm uppercase transition-all duration-300 relative group text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary`}
+                  >
+                    {section}
+                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full`}></span>
+                  </Link>
+                )}
               </li>
             ))}
+            {location.pathname !== "/projects" && (
+              <li>
+                <Link 
+                  to="/projects" 
+                  className="font-medium text-sm uppercase transition-all duration-300 relative group text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                >
+                  Projects
+                  <span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full"></span>
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
         
@@ -204,10 +227,9 @@ function Navbar() {
         } overflow-y-auto`}
         aria-hidden={!menuOpen}
       >
-        <div className="p-5 sm:p-6">
-          <div className="flex justify-between items-center mb-6 sm:mb-8">
+        <div className="p-5 sm:p-6">          <div className="flex justify-between items-center mb-6 sm:mb-8">
             <div className="text-xl sm:text-2xl font-bold">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Bunny</span>
+              <Link to="/" onClick={() => setMenuOpen(false)} className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Bunny</Link>
             </div>
             <button 
               onClick={() => setMenuOpen(false)}
@@ -219,26 +241,52 @@ function Navbar() {
               </svg>
             </button>
           </div>
-          
-          <ul className="space-y-4 sm:space-y-6 mt-8 sm:mt-10">
+            <ul className="space-y-4 sm:space-y-6 mt-8 sm:mt-10">
             {['works', 'about', 'skills', 'testimonial', 'contact'].map((section, index) => (
               <li key={section} className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `${0.1 + index * 0.1}s`, animationFillMode: 'forwards'}}>
-                <a 
-                  href={`#${section}`} 
+                {location.pathname === "/" ? (
+                  <a 
+                    href={`#${section}`} 
+                    onClick={() => setMenuOpen(false)} 
+                    className={`block text-base sm:text-lg font-medium uppercase transition-all duration-300 ${
+                      activeSection === section 
+                        ? 'text-primary' 
+                        : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                    }`}
+                  >
+                    <span className="flex items-center">
+                      <span className="w-5 sm:w-6 h-0.5 bg-accent mr-2 sm:mr-3 inline-block"></span>
+                      {section}
+                    </span>
+                  </a>
+                ) : (
+                  <Link 
+                    to={`/#${section}`} 
+                    onClick={() => setMenuOpen(false)} 
+                    className="block text-base sm:text-lg font-medium uppercase transition-all duration-300 text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                  >
+                    <span className="flex items-center">
+                      <span className="w-5 sm:w-6 h-0.5 bg-accent mr-2 sm:mr-3 inline-block"></span>
+                      {section}
+                    </span>
+                  </Link>
+                )}
+              </li>
+            ))}
+            {location.pathname !== "/projects" && (
+              <li className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `0.6s`, animationFillMode: 'forwards'}}>
+                <Link 
+                  to="/projects" 
                   onClick={() => setMenuOpen(false)} 
-                  className={`block text-base sm:text-lg font-medium uppercase transition-all duration-300 ${
-                    activeSection === section 
-                      ? 'text-primary' 
-                      : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
-                  }`}
+                  className="block text-base sm:text-lg font-medium uppercase transition-all duration-300 text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
                 >
                   <span className="flex items-center">
                     <span className="w-5 sm:w-6 h-0.5 bg-accent mr-2 sm:mr-3 inline-block"></span>
-                    {section}
+                    Projects
                   </span>
-                </a>
+                </Link>
               </li>
-            ))}
+            )}
           </ul>
           
           <div className="mt-8 sm:mt-12 pt-5 sm:pt-6 border-t border-gray-100 dark:border-gray-800 transform translate-y-8 opacity-0 animate-slide-up" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
