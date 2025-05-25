@@ -120,8 +120,8 @@ function About() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/bhavashesh_dachapalli_resume.pdf" 
-                download="bhavashesh_dachapalli_resume.pdf"
+                href="/bhavashesh_resume_2025.pdf" 
+                download="bhavashesh_resume_2025.pdf"
                 className="group relative overflow-hidden bg-primary hover:bg-accent text-white px-8 py-3 rounded-full font-medium transition-all duration-500 transform hover:translate-y-[-3px] shadow-button flex items-center justify-center"
               >
                 <span className="mr-2">Download CV</span>
