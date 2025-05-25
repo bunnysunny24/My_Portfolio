@@ -100,8 +100,7 @@ function Navbar() {
             </span>
           </Link>
         </div>
-        
-        {/* Desktop Navigation */}
+          {/* Desktop Navigation */}
         <div className="hidden md:block">
           <ul className="flex space-x-6 lg:space-x-8">
             {['works', 'about', 'skills', 'contact'].map((section) => (
@@ -131,6 +130,21 @@ function Navbar() {
                 )}
               </li>
             ))}
+            <li>
+              <Link 
+                to="/certificates" 
+                className={`font-medium text-sm uppercase transition-all duration-300 relative group ${
+                  location.pathname === "/certificates" 
+                    ? 'text-primary' 
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                }`}
+              >
+                Certificates
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                  location.pathname === "/certificates" ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </Link>
+            </li>
             {location.pathname !== "/projects" && (
               <li>
                 <Link 
@@ -240,8 +254,7 @@ function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-          </div>
-            <ul className="space-y-4 sm:space-y-6 mt-8 sm:mt-10">
+          </div>            <ul className="space-y-4 sm:space-y-6 mt-8 sm:mt-10">
             {['works', 'about', 'skills', 'testimonial', 'contact'].map((section, index) => (
               <li key={section} className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `${0.1 + index * 0.1}s`, animationFillMode: 'forwards'}}>
                 {location.pathname === "/" ? (
@@ -273,6 +286,22 @@ function Navbar() {
                 )}
               </li>
             ))}
+            <li className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `${0.1 + 5 * 0.1}s`, animationFillMode: 'forwards'}}>
+              <Link 
+                to="/certificates" 
+                onClick={() => setMenuOpen(false)} 
+                className={`block text-base sm:text-lg font-medium uppercase transition-all duration-300 ${
+                  location.pathname === "/certificates" 
+                    ? 'text-primary' 
+                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                }`}
+              >
+                <span className="flex items-center">
+                  <span className="w-5 sm:w-6 h-0.5 bg-accent mr-2 sm:mr-3 inline-block"></span>
+                  Certificates
+                </span>
+              </Link>
+            </li>
             {location.pathname !== "/projects" && (
               <li className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `0.6s`, animationFillMode: 'forwards'}}>
                 <Link 

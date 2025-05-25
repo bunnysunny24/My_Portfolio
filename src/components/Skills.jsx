@@ -120,20 +120,6 @@ function Skills() {
         </div>
 
         {/* Optional: Add a download resume button */}
-        <div className="text-center mt-12">
-          <a 
-            href="#" 
-            className="group inline-flex items-center gap-2 bg-white dark:bg-gray-800 text-primary hover:text-accent border border-primary/20 px-8 py-3 rounded-full font-medium transition-colors duration-300 shadow-sm hover:shadow-md dark:text-accent"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <span>View My Full Resume</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   );

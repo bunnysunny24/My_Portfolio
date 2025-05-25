@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AllProjects from './components/AllProjects';
+import Certificates from './components/Certificates';
 import './App.css';
 
 function App() {
@@ -29,12 +30,12 @@ function App() {
                   <Works />
                   <About />
                   <Skills />
+                  <Certificates />
                   <Contact />
                 </main>
                 <Footer />
               </div>
-            </div>
-          } />
+            </div>          } />
 
           {/* All Projects Page Route */}
           <Route path="/projects" element={
@@ -43,6 +44,18 @@ function App() {
               <div className="relative z-10 px-4 md:px-12 lg:px-20">
                 <Navbar />
                 <AllProjects />
+              </div>
+            </div>
+          } />
+
+          {/* Certificates Page Route */}
+          <Route path="/certificates" element={
+            <div className="relative min-h-screen overflow-x-hidden font-sans bg-white dark:bg-gray-900 transition-colors duration-300">
+              <Background />
+              <div className="relative z-10 px-4 md:px-12 lg:px-20">
+                <Navbar />
+                <Certificates />
+                <Footer />
               </div>
             </div>
           } />
