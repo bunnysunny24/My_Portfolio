@@ -38,7 +38,7 @@ function Navbar() {
       }
       
       // Handle active section highlighting
-      const sections = ['works', 'about', 'skills', 'testimonial', 'contact'];
+      const sections = ['work-experience', 'works', 'about', 'skills', 'testimonial', 'contact'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -103,7 +103,7 @@ function Navbar() {
           {/* Desktop Navigation */}
         <div className="hidden md:block">
           <ul className="flex space-x-6 lg:space-x-8">
-            {['works', 'about', 'skills', 'contact'].map((section) => (
+            {['work-experience', 'works', 'about', 'skills', 'contact'].map((section) => (
               <li key={section}>
                 {location.pathname === "/" ? (
                   <a 
@@ -114,7 +114,7 @@ function Navbar() {
                         : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
                     }`}
                   >
-                    {section}
+                    {section === 'work-experience' ? 'Experience' : section}
                     <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
                       activeSection === section ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}></span>
@@ -124,7 +124,7 @@ function Navbar() {
                     to={`/#${section}`} 
                     className={`font-medium text-sm uppercase transition-all duration-300 relative group text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary`}
                   >
-                    {section}
+                    {section === 'work-experience' ? 'Experience' : section}
                     <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full`}></span>
                   </Link>
                 )}
@@ -255,7 +255,7 @@ function Navbar() {
               </svg>
             </button>
           </div>            <ul className="space-y-4 sm:space-y-6 mt-8 sm:mt-10">
-            {['works', 'about', 'skills', 'testimonial', 'contact'].map((section, index) => (
+            {['work-experience', 'works', 'about', 'skills', 'testimonial', 'contact'].map((section, index) => (
               <li key={section} className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `${0.1 + index * 0.1}s`, animationFillMode: 'forwards'}}>
                 {location.pathname === "/" ? (
                   <a 
@@ -269,7 +269,7 @@ function Navbar() {
                   >
                     <span className="flex items-center">
                       <span className="w-5 sm:w-6 h-0.5 bg-accent mr-2 sm:mr-3 inline-block"></span>
-                      {section}
+                      {section === 'work-experience' ? 'Experience' : section}
                     </span>
                   </a>
                 ) : (
@@ -280,7 +280,7 @@ function Navbar() {
                   >
                     <span className="flex items-center">
                       <span className="w-5 sm:w-6 h-0.5 bg-accent mr-2 sm:mr-3 inline-block"></span>
-                      {section}
+                      {section === 'work-experience' ? 'Experience' : section}
                     </span>
                   </Link>
                 )}
