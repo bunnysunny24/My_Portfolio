@@ -3,31 +3,39 @@ import React from 'react';
 function Certificates() {
   const certificates = [
     { 
-      id: 1, 
+      id: 1,
+      title: "Introducing Generative AI with AWS",
+      issuer: "Udacity",
+      image: "/Screenshot 2025-07-02 202706.png",
+      credentialId: "e/2605bbe4-3d32-11f0-9f27-1b0f6948b1a9",
+      credentialUrl: "https://www.udacity.com/certificate/e/2605bbe4-3d32-11f0-9f27-1b0f6948b1a9"
+    },
+    { 
+      id: 2, 
       title: "GitHub Foundations", 
       issuer: "GitHub",
       image: "/Github_foundation_certi.jpeg" 
     },
     { 
-      id: 2, 
+      id: 3, 
       title: "Supervised Machine Learning", 
       issuer: "Stanford, Deeplearning.AI",
       image: "/Machine_leanring_certi.jpeg" 
     },
     { 
-      id: 3, 
+      id: 4, 
       title: "Database Management Systems", 
       issuer: "NPTEL",
       image: "/Dbms_certi.jpeg" 
     },
     { 
-      id: 4, 
+      id: 5, 
       title: "Introduction to IoT and Embedded Systems", 
       issuer: "University of California, Irvine",
       image: "/intro_to_iot_and_embedded_systems.jpeg" 
     },
     { 
-      id: 5, 
+      id: 6, 
       title: "IoT Wireless & Cloud Computing Emerging Technologies", 
       issuer: "Yonsei University",
       image: "/iot_wireless_technology.jpeg" 
@@ -71,7 +79,7 @@ function Certificates() {
             <div 
               key={cert.id}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-card hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
-              onClick={() => window.open(cert.image, '_blank')}
+              onClick={() => cert.credentialUrl ? window.open(cert.credentialUrl, '_blank') : window.open(cert.image, '_blank')}
             >
               <div className="relative overflow-hidden aspect-[4/3]">
                 <img 
@@ -81,13 +89,18 @@ function Certificates() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                   <span className="text-white px-4 py-2 rounded-full text-sm bg-primary/90 backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    View Certificate
+                    {cert.credentialUrl ? "Verify Certificate" : "View Certificate"}
                   </span>
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-primary dark:text-white text-lg group-hover:text-accent transition-colors duration-300">{cert.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">{cert.issuer}</p>
+                {cert.credentialId && (
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 truncate">
+                    ID: {cert.credentialId}
+                  </p>
+                )}
               </div>
             </div>
           ))}

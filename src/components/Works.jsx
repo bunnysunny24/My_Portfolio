@@ -7,6 +7,15 @@ function Works() {
   const projects = [
     {
       id: 1,
+      title: "Logistics Pulse Copilot: Real-Time AI Assistant",
+      category: "AI & ML",
+      image: "/Screenshot 2025-07-02 202047.png",
+      description: "A real-time AI-powered document processing system for logistics operations. It demonstrates streaming ETL, dynamic indexing, and live RAG capabilities for logistics and finance operations.",
+      tags: ["Python", "Pathway", "RAG", "FastAPI", "React.js", "Streaming ETL", "Vector Databases", "Real-time Processing", "Document Processing", "Anomaly Detection"],
+      github: "https://github.com/bunnysunny24/Logistics"
+    },
+    {
+      id: 2,
       title: "AgriSync: AI-Powered Smart Farming & Marketplace System",
       category: "Full Stack",
       image: "/image.png",
@@ -16,7 +25,7 @@ function Works() {
       github: "https://github.com/bunnysunny24/AgriSync"
     },
     {
-      id: 2,
+      id: 3,
       title: "BluePulse: Smart Water Management System",
       category: "IoT & ML",
       image: "/Screenshot 2025-05-08 223845.png",
@@ -26,22 +35,13 @@ function Works() {
       github: "https://github.com/bunnysunny24/BluePulse"
     },
     {
-      id: 3,
+      id: 4,
       title: "OnBoardX: IoT-Based Vehicle Monitoring System",
       category: "IoT & ML",
       image: "/Screenshot 2025-05-08 224147.png",
       description: "A real-time IoT-based vehicle monitoring system integrating ESP32, Raspberry Pi, and ML for safety alerts, accident detection, and emergency response.",
       tags: ["Python", "Raspberry Pi", "ESP32", "FastAPI", "Flask", "Machine Learning", "Firebase", "React Native", "ReactJS", "IoT", "Real-time Analytics"],
       github: "https://github.com/bunnysunny24/Project-OnBoardX"
-    },
-    {
-      id: 4,
-      title: "Eco-eats: Food Wastage Distribution System",
-      category: "Desktop Application",
-      image: "/Screenshot 2025-05-08 224741.png",
-      description: "A Java-based application that connects food providers with collectors to reduce food waste through an efficient distribution system with integrated mapping.",
-      tags: ["Java", "JavaFX", "MySQL", "JDBC", "OpenStreetMap", "OOP", "Database Management", "GIS"],
-      github: "https://github.com/bunnysunny24/Eco-eats"
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ function Works() {
       github: "https://github.com/bunnysunny24/QuestEd"
     },
     {
-      id: 6,
+      id: 7,
       title: "Vibeout: Emotion-Based Workout Assistant",
       category: "AI & IoT",
       image: "/Screenshot 2025-05-08 225442.png",
@@ -63,7 +63,7 @@ function Works() {
     }
   ];
 
-  const categories = ['all', 'Full Stack', 'IoT & ML', 'AI & IoT', 'Frontend', 'Mobile App', 'Desktop Application', 'Ed-Tech'];
+  const categories = ['all', 'Full Stack', 'IoT & ML', 'AI & ML', 'AI & IoT', 'Frontend', 'Mobile App', 'Desktop Application', 'Ed-Tech'];
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
