@@ -3,6 +3,13 @@ import React from 'react';
 function Certificates() {
   const certificates = [
     { 
+      id: 9,
+      title: "AWS Educate Machine Learning Foundations",
+      issuer: "AWS Educate",
+      image: "/Screenshot 2025-07-02 203607.png",
+      credentialUrl: "https://www.credly.com/badges/b8961b76-183c-4cee-996d-10865ce7ddcf/public_url"
+    },
+    { 
       id: 1,
       title: "Introducing Generative AI with AWS",
       issuer: "Udacity",

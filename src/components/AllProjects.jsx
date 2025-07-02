@@ -12,6 +12,15 @@ function AllProjects() {
   const allProjects = [
     {
       id: 1,
+      title: "Logistics Pulse Copilot: Real-Time AI Assistant",
+      category: "AI & ML",
+      image: "/Screenshot 2025-07-02 202047.png",
+      description: "A real-time AI-powered document processing system for logistics operations. It demonstrates streaming ETL, dynamic indexing, and live RAG capabilities for logistics and finance operations.",
+      tags: ["Python", "Pathway", "RAG", "FastAPI", "React.js", "Streaming ETL", "Vector Databases", "Real-time Processing", "Document Processing", "Anomaly Detection"],
+      github: "https://github.com/bunnysunny24/Logistics"
+    },
+    {
+      id: 2,
       title: "AgriSync: AI-Powered Smart Farming & Marketplace System",
       category: "Full Stack",
       image: "/image.png",
@@ -21,7 +30,7 @@ function AllProjects() {
       github: "https://github.com/bunnysunny24/AgriSync"
     },
     {
-      id: 2,
+      id: 3,
       title: "BluePulse: Smart Water Management System",
       category: "IoT & ML",
       image: "/Screenshot 2025-05-08 223845.png",
@@ -31,22 +40,13 @@ function AllProjects() {
       github: "https://github.com/bunnysunny24/BluePulse"
     },
     {
-      id: 3,
+      id: 4,
       title: "OnBoardX: IoT-Based Vehicle Monitoring System",
       category: "IoT & ML",
       image: "/Screenshot 2025-05-08 224147.png",
       description: "A real-time IoT-based vehicle monitoring system integrating ESP32, Raspberry Pi, and ML for safety alerts, accident detection, and emergency response.",
       tags: ["Python", "Raspberry Pi", "ESP32", "FastAPI", "Flask", "Machine Learning", "Firebase", "React Native", "ReactJS", "IoT", "Real-time Analytics"],
       github: "https://github.com/bunnysunny24/Project-OnBoardX"
-    },
-    {
-      id: 4,
-      title: "Eco-eats: Food Wastage Distribution System",
-      category: "Desktop Application",
-      image: "/Screenshot 2025-05-08 224741.png",
-      description: "A Java-based application that connects food providers with collectors to reduce food waste through an efficient distribution system with integrated mapping.",
-      tags: ["Java", "JavaFX", "MySQL", "JDBC", "OpenStreetMap", "OOP", "Database Management", "GIS"],
-      github: "https://github.com/bunnysunny24/Eco-eats"
     },
     {
       id: 5,
@@ -194,7 +194,25 @@ function AllProjects() {
       description: "A convenient expense tracking and settlement application designed for roommates to manage shared expenses, split bills fairly, and track payment history.",
       tags: ["Python", "React.js", "MySQL", "FastAPI", "Expense Tracking", "Payment Settlement", "Financial Management"],
       github: "https://github.com/bunnysunny24/RoomiePay"
-    }
+    },
+    {
+      id: 21,
+      title: "Java Project: Library Management System",
+      category: "Backend",
+      image: "/java_certi.jpeg",
+      description: "A robust library management system built using Java, featuring user authentication, book inventory management, and transaction tracking.",
+      tags: ["Java", "MySQL", "Backend", "OOP", "Swing"],
+      github: "https://github.com/bunnysunny24/Java-Library-Management-System"
+    },
+    {
+      id: 22,
+      title: "Eco-eats: Food Wastage Distribution System",
+      category: "Desktop Application",
+      image: "/Screenshot 2025-05-08 224741.png",
+      description: "A Java-based application that connects food providers with collectors to reduce food waste through an efficient distribution system with integrated mapping.",
+      tags: ["Java", "JavaFX", "MySQL", "JDBC", "OpenStreetMap", "OOP", "Database Management", "GIS"],
+      github: "https://github.com/bunnysunny24/Eco-eats"
+    },
   ];
 
   // Extract all unique categories from projects
