@@ -7,6 +7,7 @@ import Background from './components/Background';
 import About from './components/About';
 import WorkExperience from './components/WorkExperience';
 import Works from './components/Works';
+import Achievements from './components/Achievements';
 import Skills from './components/Skills';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -30,6 +31,7 @@ function App() {
                   <Hero />
                   <WorkExperience />
                   <Works />
+                  <Achievements />
                   <About />
                   <Skills />
                   <Certificates />

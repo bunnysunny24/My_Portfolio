@@ -17,6 +17,7 @@ function AllProjects() {
       image: "/Screenshot 2025-07-02 202047.png",
       description: "A real-time AI-powered document processing system for logistics operations. It demonstrates streaming ETL, dynamic indexing, and live RAG capabilities for logistics and finance operations.",
       tags: ["Python", "Pathway", "RAG", "FastAPI", "React.js", "Streaming ETL", "Vector Databases", "Real-time Processing", "Document Processing", "Anomaly Detection"],
+      link: "https://www.youtube.com/watch?v=3IMeI_IDK_k",
       github: "https://github.com/bunnysunny24/Logistics"
     },
     {
@@ -194,15 +195,6 @@ function AllProjects() {
       description: "A convenient expense tracking and settlement application designed for roommates to manage shared expenses, split bills fairly, and track payment history.",
       tags: ["Python", "React.js", "MySQL", "FastAPI", "Expense Tracking", "Payment Settlement", "Financial Management"],
       github: "https://github.com/bunnysunny24/RoomiePay"
-    },
-    {
-      id: 21,
-      title: "Java Project: Library Management System",
-      category: "Backend",
-      image: "/java_certi.jpeg",
-      description: "A robust library management system built using Java, featuring user authentication, book inventory management, and transaction tracking.",
-      tags: ["Java", "MySQL", "Backend", "OOP", "Swing"],
-      github: "https://github.com/bunnysunny24/Java-Library-Management-System"
     },
     {
       id: 22,

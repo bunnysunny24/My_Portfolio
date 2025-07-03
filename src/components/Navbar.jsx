@@ -38,7 +38,7 @@ function Navbar() {
       }
       
       // Handle active section highlighting
-      const sections = ['work-experience', 'works', 'about', 'skills', 'testimonial', 'contact'];
+      const sections = ['work-experience', 'works', 'achievements', 'about', 'skills', 'testimonial', 'contact'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -103,7 +103,7 @@ function Navbar() {
           {/* Desktop Navigation */}
         <div className="hidden md:block">
           <ul className="flex space-x-6 lg:space-x-8">
-            {['work-experience', 'works', 'about', 'skills', 'contact'].map((section) => (
+            {['work-experience', 'works', 'achievements', 'about', 'skills', 'contact'].map((section) => (
               <li key={section}>
                 {location.pathname === "/" ? (
                   <a 
@@ -255,7 +255,7 @@ function Navbar() {
               </svg>
             </button>
           </div>            <ul className="space-y-4 sm:space-y-6 mt-8 sm:mt-10">
-            {['work-experience', 'works', 'about', 'skills', 'testimonial', 'contact'].map((section, index) => (
+            {['work-experience', 'works', 'achievements', 'about', 'skills', 'testimonial', 'contact'].map((section, index) => (
               <li key={section} className="transform translate-x-8 opacity-0 animate-slide-in-right" style={{animationDelay: `${0.1 + index * 0.1}s`, animationFillMode: 'forwards'}}>
                 {location.pathname === "/" ? (
                   <a 
